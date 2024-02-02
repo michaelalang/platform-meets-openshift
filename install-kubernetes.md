@@ -76,6 +76,13 @@ to be able to utilize Routes we need to execute following command after the Clus
 oc apply -k router
 ~~~
 
+### additional tools yq, jq
+
+if you want, you can download additional tools. They are not mandatory but will simplify reporting and visualization
+
+* yq https://github.com/mikefarah/yq/releases/download/v4.40.5/yq_linux_amd64
+* jq https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-linux-amd64
+
 ## Removing the Workshop Cluster
 
 After you have finished the Workshop, you can remove the Cluster with following command
