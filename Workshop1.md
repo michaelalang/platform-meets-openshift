@@ -11,7 +11,7 @@ Kubernetes is a Container automation and orchestration platform. Similar to AAP,
 
 ## Basic configuration
 
-Similar to RHEL'e `/etc` Kubernetes uses the `etcd` service to store configuration of all objects configured. Those objects are managed through the `kube-api`using https API calls to CRUD (Create,Read,Update,Delete) all type of configurations. What is specified by Custom Resource Definitions (CRD) providing parameters and options similar to man pages.
+Similar to RHEL's `/etc` Kubernetes uses the `etcd` service to store configuration of all objects configured. Those objects are managed through the `kube-api`using https API calls to CRUD (Create,Read,Update,Delete) all type of configurations. What is specified by Custom Resource Definitions (CRD) providing parameters and options similar to man pages.
 `oc` is the Openshift cli extending `kubectl` for some OCP specific use-cases.
 `yq` and `jq` are useful to manipulate and compensate returned content into narrowed 
 down views.
