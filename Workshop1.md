@@ -177,6 +177,25 @@ oc -n workshop create -f service.yml
 
 # we expose (configure the Router) to accept a FQDN for accessing our service
 oc -n workshop expose service nginx --name=nginx --hostname=nginx.apps.example.com --wildcard-policy=None
+
+# if you are using kubectl with an alias to oc you need to inject the yaml instead of using the command
+cat <<EOF> route.yml
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: nginx
+  namespace: workshop
+spec:
+  host: nginx.apps.example.com
+  port:
+    targetPort: http
+  to:
+    kind: service
+    name: nginx
+    weight: null
+  wildcardPolicy: None
+EOF
+oc -n workshop create -f route.yml
 ~~~
 Now we've already touched many items you might consider magic, so I want you to recall what a CRD provides ? That YAML content you didn't know where to get it from.
 ~~~
