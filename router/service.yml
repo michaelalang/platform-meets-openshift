@@ -4,7 +4,6 @@ metadata:
   name: haproxy
   namespace: openshift-ingress
 spec:
-  allocateLoadBalancerNodePorts: true
   externalTrafficPolicy: Cluster
   internalTrafficPolicy: Cluster
   ipFamilies:
