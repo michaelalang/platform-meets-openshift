@@ -71,7 +71,8 @@ kind create cluster --config kind-workshop.yml
 
 ### initial configuration for your Workshop Cluster
 
-to be able to utilize Routes we need to execute following command after the Cluster has deployed and is ready to be used
+to be able to utilize Routes we need to execute following command after the Cluster has deployed and is ready to be used. For that we need to clone this workshop repository to our machine and enter the directory so the following command can find the directory `router`.
+
 ~~~
 oc apply -k router
 ~~~
